@@ -1,0 +1,1 @@
+This is a dummy web-app in ReactJS used to develop and test the chess-server logic.
