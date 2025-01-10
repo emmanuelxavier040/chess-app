@@ -59,50 +59,6 @@ public abstract class Piece {
         }
         return false;
 
-//
-//        if(this instanceof Bishop) {
-//            int rankDirection = (to_rank - from_rank) > 0 ? 1 : -1;
-//            int fileDirection = (to_file - from_file) > 0 ? 1 : -1;
-//
-//            from_rank = from_rank + rankDirection;
-//            from_file = from_file + fileDirection;
-//
-//            while(!(from_rank == to_rank && from_file == to_file)) {
-//                if(board.getPiece(from_rank, from_file) != null)
-//                    return true;
-//
-//                from_rank = from_rank + rankDirection;
-//                from_file = from_file + fileDirection;
-//            }
-//            return false;
-//
-//        }
-//
-//        if(from_rank == to_rank) {
-//            // movement on the same rank
-//            from_file++;
-//            to_file--;
-//            while(from_file <= to_file) {
-//                if(board.getPiece(from_file, to_file) != null) return true;
-//                from_file++;
-//            }
-//            return false;
-//        }
-//
-//        if(from_file == to_file) {
-//            // movement on the same file
-//            from_rank++;
-//            to_rank--;
-//            while(from_rank <= to_rank) {
-//                if(board.getPiece(from_rank, to_rank) != null) return true;
-//                from_rank++;
-//            }
-//            return false;
-//        }
-//
-//
-//
-//        return false;
     }
 
 }
