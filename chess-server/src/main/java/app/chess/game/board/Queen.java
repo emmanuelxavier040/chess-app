@@ -16,6 +16,12 @@ public class Queen extends Piece {
         int to_rank = to[0];
         int to_file = to[1];
 
+        boolean validMove = (from_rank == to_rank && from_file != to_file) || (from_rank != to_rank && from_file == to_file);
+        validMove = validMove || (Math.abs(from_rank - to_rank) == Math.abs(from_file - to_file));
+        if(!validMove) {
+            throw new InvalidMoveException("A Queen must be moved along a file or rank or diagonally from the current square.");
+        }
+
         if(isHittingAPiece(board, from_rank, from_file, to_rank, to_file)) {
             throw new InvalidMoveException("Cannot move a Queen through non-empty squares.");
         }

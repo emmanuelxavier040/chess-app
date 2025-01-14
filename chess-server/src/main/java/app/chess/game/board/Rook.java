@@ -16,6 +16,10 @@ public class Rook extends Piece {
         int to_rank = to[0];
         int to_file = to[1];
 
+        if(!(from_rank == to_rank && from_file != to_file) && !(from_rank != to_rank && from_file == to_file)) {
+            throw new InvalidMoveException("A Rook must be moved along a file or rank from the current square.");
+        }
+
         if(isHittingAPiece(board, from_rank, from_file, to_rank, to_file)) {
             throw new InvalidMoveException("Cannot move a Rook through non-empty squares.");
         }
